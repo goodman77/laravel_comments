@@ -11,6 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::get('/posts/{id}', function ($id)
+{
+    $post = App\Post::with([
+    	'comments',
+    	'parentComments.owner',
+    	'parentComments.allRepliesWithOwner'
+    ])->findOrFail($id);
+
+    return view('comments.main')->with(
+    	array("post" => $post)
+    );
 });
+
+Route::post('/comment/add', 'CommentController@add');
