@@ -12,7 +12,7 @@ This is a simple Laravel comment with reply. Front end HTML 5 validation & Jquer
 - create a database and setup the credintials in .env
 - run "php artisan migrate" to migrate the tables
 - run "php artisan db:seed" to seed the table with intial post = 1 
-- navigate to localhost/post/1
+- navigate to localhost/posts/1
 - Code to look for :
   1. Main controller: https://github.com/goodman77/laravel_comments/blob/master/app/Http/Controllers/CommentController.php
   2. Comment Model : https://github.com/goodman77/laravel_comments/blob/master/app/Comment.php
